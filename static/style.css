@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; 
+    padding: 0; 
+    color :rgb(37, 37, 39);
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #413f3f;
+}
+
+#head-of-log-file {
+    margin-bottom: 20px; 
+    border: 1px solid;
+}
+#head-of-log-file h2 {
+    font-size: 24px;
+    color: #333; 
+}
+
+#tail_of_log_file {
+    margin-bottom: 20px; 
+    border: 1px solid;
+}
+#tail_of_log_file h2 {
+    font-size: 24px;
+    color: #333; 
+}
+
+#total-records {
+    margin-bottom: 20px; 
+}
+#total-records h2 {
+    font-size: 24px;
+    color: #333; 
+}
+
+#total-columns {
+    margin-bottom: 20px; 
+}
+#total-columns h2 {
+    font-size: 24px;
+    color: #333; 
+}
+
+#unique_ip_addresses {
+    margin-bottom: 20px; 
+}
+#unique_ip_addresses h2 {
+    font-size: 24px;
+    color: #333; 
+}
+
+#request_count_per_ip {
+    margin-bottom: 20px; 
+}
+#request_count_per_ip h2 {
+    font-size: 24px;
+    color: #333; 
+}
+
+#top10_hits_per_ip_address {
+    margin-bottom: 20px; 
+}
+#top10_hits_per_ip_address h2 {
+    font-size: 24px;
+    color: #333; 
+}
+
+#request_count_per_httpcode {
+    margin-bottom: 20px; 
+}
+#request_count_per_httpcode h2 {
+    font-size: 24px;
+    color: #333; 
+}
+
+#top10_hits_per_http_codes {
+    margin-bottom: 20px; 
+}
+#top10_hits_per_http_codes h2 {
+    font-size: 24px;
+    color: #333; 
+}
+
+#unique_http_codes {
+    margin-bottom: 20px; 
+}
+#unique_http_codes h2 {
+    font-size: 24px;
+    color: #333; 
+}
+
+#request_count_per_URL {
+    margin-bottom: 20px; 
+}
+#request_count_per_URL h2 {
+    font-size: 24px;
+    color: #333; 
+}
+
+#URL_max_hits {
+    margin-bottom: 20px; 
+}
+#URL_max_hits h2 {
+    font-size: 24px;
+    color: #333; 
+}
+
+#top10_hits_per_URL {
+    margin-bottom: 20px; 
+}
+#top10_hits_per_URL h2 {
+    font-size: 24px;
+    color: #333; 
+}
+
+#request_count_per_Platform {
+    margin-bottom: 20px; 
+}
+#request_count_per_Platform h2 {
+    font-size: 24px;
+    color: #333; 
+}
+
+#top10_hits_per_Platform {
+    margin-bottom: 20px; 
+}
+#top10_hits_per_Platform h2 {
+    font-size: 24px;
+    color: #333; 
+}
+
+#request_count_per_Browser {
+    margin-bottom: 20px; 
+}
+#request_count_per_Browser h2 {
+    font-size: 24px;
+    color: #333; 
+}
+
+#top10_hits_per_Browser {
+    margin-bottom: 20px; 
+}
+#top10_hits_per_Browser h2 {
+    font-size: 24px;
+    color: #333; 
+}
+
+#hits_count_per_hr {
+    margin-bottom: 20px; 
+}
+#hits_count_per_hr h2 {
+    font-size: 24px;
+    color: #333; 
+}
+
+#top10_hits_per_hr {
+    margin-bottom: 20px; 
+}
+#top10_hits_per_hr h2 {
+    font-size: 24px;
+    color: #333; 
+}
+
+#traffic_distribution_hrly {
+    margin-bottom: 20px; 
+}
+#traffic_distribution_hrly h2 {
+    font-size: 24px;
+    color: #333; 
+}
+
+#report_of_log_analysis {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #5d5c5c;
+    background-color: #f9f9f9;
+}
+#report_of_log_analysis h2 {
+    font-size: 24px;
+    color: #333; 
+}

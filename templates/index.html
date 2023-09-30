@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Log Analyzer</title>
+</head>
+<body>
+    <h1>Log Analyzer</h1>
+    <p>Display analysis results here:</p>
+
+    <div id="head_of_log_file">
+        <h2>Head of Log File</h2>
+        <pre>{{ analysis_results.head_of_log_file }}</pre>
+    </div>
+    <div id="tail_of_log_file">
+        <h2>Tail of Log File</h2>
+        <pre>{{ analysis_results['tail_of_log_file'] }}</pre>
+    </div>
+    <div id="total-records">
+        <h2>Total Records</h2>
+        <pre>{{ analysis_results['total_records'] }}</pre>
+    </div>
+    <div id="total_columns">
+        <h2>Total Columns</h2>
+        <pre>{{ analysis_results['total_columns'] }}</pre>
+    </div>
+    <div id="unique_ip_addresses">
+        <h2>Unique ip adress</h2>
+        <pre>{{ analysis_results['unique_ip_addresses'] }}</pre>
+    </div>
+    <div id="request_count_per_ip">
+        <h2>Request count per ip address</h2>
+        <pre>{{ analysis_results['request_count_per_ip'] }}</pre>
+    </div>
+    <div id="top10_hits_per_ip_address">
+        <h2>Top 10 hits per ip adress</h2>
+        <pre>{{ analysis_results['top10_hits_per_ip_address'] }}</pre>
+        <img src="data:image/png;base64,{{ analysis_results['ip_address_plot'] }}"  alt="Top 10 Hits per IP Address">
+    </div>
+    <div id="request_count_per_httpcode">
+        <h2>Request count per http code</h2>
+        <pre>{{ analysis_results['request_count_per_httpcode'] }}</pre>
+    </div>
+    <div id="top10_hits_per_http_codes">
+        <h2>Top 10 hits per http code</h2>
+        <pre>{{ analysis_results['top10_hits_per_http_codes'] }}</pre>
+        <img src="data:image/png;base64,{{ analysis_results['http_codes_plot'] }}" alt="Top 10 Hits per http codes">
+    </div>
+    <div id="unique_http_codes">
+        <h2>Unique http codes</h2>
+        <pre>{{ analysis_results['unique_http_codes'] }}</pre>
+    </div>
+    <div id="request_count_per_URL">
+        <h2>Request count per URL</h2>
+        <pre>{{ analysis_results['request_count_per_URL'] }}</pre>
+    </div>
+    <div id="URL_max_hits">
+        <h2>URL with Max Hits</h2>
+        <pre>{{ analysis_results['URL_max_hits'] }}</pre>
+    </div>
+    <div id="top10_hits_per_URL">
+        <h2>Top 10 hits per URL</h2>
+        <pre>{{ analysis_results['top10_hits_per_URL'] }}</pre>
+        <img src="data:image/png;base64,{{ analysis_results['URL_plot'] }}" alt="Top 10 Hits per URL">
+    </div>
+    <div id="request_count_per_Platform">
+        <h2>Request count per Platform</h2>
+        <pre>{{ analysis_results['request_count_per_Platform'] }}</pre>
+    </div>
+    <div id="top10_hits_per_Platform">
+        <h2>Top 10 hits per Platform</h2>
+        <pre>{{ analysis_results['top10_hits_per_Platform'] }}</pre>
+        <img src="data:image/png;base64,{{ analysis_results['Platform_plot'] }}" alt="Top 10 Hits per Platform">
+    </div>
+    <div id="request_count_per_Browser">
+        <h2>Request count per Browser</h2>
+        <pre>{{ analysis_results['request_count_per_Browser'] }}</pre>
+    </div>
+    <div id="top10_hits_per_Browser">
+        <h2>Top 10 hits per Browser</h2>
+        <pre>{{ analysis_results['top10_hits_per_Browser'] }}</pre>
+        <img src="data:image/png;base64,{{ analysis_results['Browser_plot'] }}" alt="Top 10 Hits per Browser">
+    </div>
+    <div id="hits_count_per_hr">
+        <h2>Hits Count per hour</h2>
+        <pre>{{ analysis_results['hits_count_per_hr'] }}</pre>
+    </div>
+    <div id="top10_hits_per_hr">
+        <h2>Top 10 hits per Hour</h2>
+        <pre>{{ analysis_results['top10_hits_per_hr'] }}</pre>
+        <img src="data:image/png;base64,{{ analysis_results['Hr_plot'] }}" alt="Top 10 Hits per hr">
+    </div>
+    <div id="traffic_distribution_hrly">
+        <h2>Hourly Traffic Distribution</h2>
+        <pre>{{ analysis_results['traffic_distribution_hrly'] }}</pre>
+    </div>
+
+</body>
+</html>
