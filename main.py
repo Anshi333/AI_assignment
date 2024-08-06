@@ -6,6 +6,7 @@ from io import BytesIO
 
 app = Flask(__name__)
 
+
 def fetch_analysis_results(logs_df,ua_df):
     top10_hits_per_ip_address, ip_address_plot = file1.get_top10_hits_per_ip_address(logs_df)
     top10_hits_per_http_codes, http_codes_plot = file1.get_top10_hits_per_http_codes(logs_df)
@@ -13,6 +14,13 @@ def fetch_analysis_results(logs_df,ua_df):
     top10_hits_per_Platform, Platform_plot = file1.get_top10_hits_per_Platform(ua_df)
     top10_hits_per_Browser,Browser_plot = file1.get_top10_hits_per_Browser(ua_df)
     top10_hits_per_hr, Hr_plot = file1.get_top10_hits_per_hr(logs_df)
+
+    def plot_to_base64(plot):
+        img = BytesIO()
+        plot.savefig(img, format='png')
+        img.seek(0)
+        return base64.b64encode(img.getvalue()).decode('utf8')
+    
     return {
         'head_of_log_file': file1.get_logfile_head(logs_df),
         'tail_of_log_file': file1.get_logfile_tail(logs_df),
@@ -47,6 +55,7 @@ def fetch_analysis_results(logs_df,ua_df):
 @app.route('/')
 def index():
     analysis_results = fetch_analysis_results(logs_df, ua_df)
+    print(analysis_results)  # Debug print
     return render_template('index.html', analysis_results=analysis_results)
 
 
